@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+
+    background-color: #121212;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.time {
+    margin: 0 auto;
+}
