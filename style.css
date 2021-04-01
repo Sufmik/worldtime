@@ -16,3 +16,10 @@ body {
     resize: both;
     overflow: auto;
 }
+
+.menu {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
