@@ -15,11 +15,6 @@ let arr = [
     {value: "NY", city: "New York", region:"America/New York", utc: -4},
     ]
 
-d=new Date()
-time_zone=d.getTimezoneOffset()
-
-console.log(time_zone)
-
 //таймер
 
 function myFuncSuper() {
