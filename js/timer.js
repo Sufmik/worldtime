@@ -7,14 +7,15 @@ function findOption(select) {
     selector.input = option
 }
 
-//массив с часовыми поясами и значениями
+//рабочий метод!!!!!!
 
-let arr = [
-    {value: "LA", city: "Los Angeles", region: "America/Los_Angeles", utc: -8},
-    {value: "MSC", city: "Moscow", region: "Europe/Moscow", utc: 3},
-    {value: "NY", city: "New York", region:"America/New York", utc: -4},
-    ]
+let newYork = new Date().toLocaleString("en-US", {timeZone: "America/New_York"},)
+let losAngeles = new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+let moscow = new Date().toLocaleString("en-Us", {timeZone: "Europe/Moscow"})
 
+console.log(newYork)
+console.log(losAngeles)
+console.log(moscow)
 //таймер
 
 function myFuncSuper() {
