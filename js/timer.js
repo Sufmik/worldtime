@@ -13,6 +13,11 @@ let newYork = new Date().toLocaleString("en-US", {timeZone: "America/New_York"},
 let losAngeles = new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
 let moscow = new Date().toLocaleString("en-Us", {timeZone: "Europe/Moscow"})
 
+function tz() {
+  this.timeZone
+}
+console.log(tz.newYork)
+
 console.log(newYork)
 console.log(losAngeles)
 console.log(moscow)
