@@ -7,15 +7,27 @@ function findOption(select) {
     selector.input = option
 }
 
+const app = {
+    data() {
+        return {
+            checked: "choose",
+            dates: [
+                {city: "Honolulu", region: "Pacific/Honolulu"},
+                {city: "Anchorage", region: "America/Anchorage"},
+                {city: "Los Angeles", region: "America/Los_Angeles"}
+            ]
+        }
+    }
+}
 //рабочий метод!!!!!!
 
-let newYork = new Date().toLocaleString("en-US", {timeZone: "America/New_York"},)
+let newYork = new Date().toLocaleString("en-US", {timeZone: "America/New_York", hour12:false, })
+        let m = newYork
+console.log(newYork)
+
 let losAngeles = new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
 let moscow = new Date().toLocaleString("en-Us", {timeZone: "Europe/Moscow"})
 
-console.log(newYork)
-console.log(losAngeles)
-console.log(moscow)
 //таймер
 
 function myFuncSuper() {
@@ -39,7 +51,8 @@ function myFuncSuper() {
         s="0"+s
     }
 
-    document.querySelector(".time").innerHTML = (h)+":"+(m)+":"+(s) //новое значение времени исходя из времени системы пользователя
+    //document.querySelector(".time").innerHTML = (h)+":"+(m)+":"+(s) //новое значение времени исходя из времени системы пользователя
+    document.querySelector(".time").innerHTML = m
 }
 
 myFuncSuper()
