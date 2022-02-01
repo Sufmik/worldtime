@@ -1,33 +1,19 @@
 //значение которое выбирает пользователь
 
-let selector = []
-
-function findOption(select) {
-    const option = select.value
-    selector.input = option
-}
-
-const app = {
-    data() {
-        return {
-            checked: "choose",
-            dates: [
-                {city: "Honolulu", region: "Pacific/Honolulu"},
-                {city: "Anchorage", region: "America/Anchorage"},
-                {city: "Los Angeles", region: "America/Los_Angeles"}
-            ]
-        }
-    }
-}
-//рабочий метод!!!!!!
-
-let newYork = new Date().toLocaleString("en-US", {timeZone: "America/New_York", hour12:false, })
-        let m = newYork
-console.log(newYork)
-
-let losAngeles = new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
-let moscow = new Date().toLocaleString("en-Us", {timeZone: "Europe/Moscow"})
-
+// let selector = []
+//
+// function findOption(select) {
+//     const option = select.value
+//     selector.input = option
+// }
+//
+// //часовые пояса
+//
+// let newYork = new Date().toLocaleString("en-US", {timeZone: "America/New_York", hour12:false, })
+//         let m = newYork
+//
+// let losAngeles = new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+// let moscow = new Date().toLocaleString("en-Us", {timeZone: "Europe/Moscow"})
 //таймер
 
 function myFuncSuper() {
@@ -51,8 +37,7 @@ function myFuncSuper() {
         s="0"+s
     }
 
-    //document.querySelector(".time").innerHTML = (h)+":"+(m)+":"+(s) //новое значение времени исходя из времени системы пользователя
-    document.querySelector(".time").innerHTML = m
+    document.querySelector(".time").innerHTML = (h)+":"+(m)+":"+(s) //новое значение времени исходя из времени системы пользователя
 }
 
 myFuncSuper()
