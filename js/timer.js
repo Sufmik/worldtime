@@ -1,25 +1,23 @@
-//значение которое выбирает пользователь
+// let timeNow = new Date()
+// let a = timeNow.getTimezoneOffset()
+//     let b = a.getHours()
+// console.log(b)
 
-// let selector = []
-//
-// function findOption(select) {
-//     const option = select.value
-//     selector.input = option
-// }
-//
-// //часовые пояса
-//
-// let newYork = new Date().toLocaleString("en-US", {timeZone: "America/New_York", hour12:false, })
-//         let m = newYork
-//
-// let losAngeles = new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
-// let moscow = new Date().toLocaleString("en-Us", {timeZone: "Europe/Moscow"})
+let selector = []
+
+function findOption() {
+    let opt = document.getElementById("menu");
+    let option = opt.value;
+    selector.input = option;
+}
+
 //таймер
 
-function myFuncSuper() {
+function timer() {
     document.querySelector(".time").innerHTML = "" //удаление предыдущего значения
 
     let timeNow = new Date()
+        let f = timeNow.getTimezoneOffset()
 
     let h = timeNow.getHours().toString()
     let m = timeNow.getMinutes().toString()
@@ -40,5 +38,6 @@ function myFuncSuper() {
     document.querySelector(".time").innerHTML = (h)+":"+(m)+":"+(s) //новое значение времени исходя из времени системы пользователя
 }
 
-myFuncSuper()
-setInterval(myFuncSuper, 1000) //итерация таймера в 1у секунду
+timer()
+setInterval(timer, 1000) //итерация таймера в 1у секунду
+setInterval(findOption, 1000) //итерация таймера в 1у секунду
