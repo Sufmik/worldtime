@@ -1,17 +1,16 @@
 let arr = [
     {msc: -180},
     {ny: 300},
-    {la: 480}
+    {la: 480},
 ]
 
 let selector = []
 
 let find = function findOption() {
     let opt = document.getElementById("menu");
-        option = opt.value;
-            selector.input = option;
-    let a = arr.find(function () {console.log(a)})
+        selector.input=opt.value
 }
+ arr.includes(find) ? console.log("true") : console.log("Ура")
 
 //таймер
 
