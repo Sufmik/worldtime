@@ -1,14 +1,16 @@
-// let timeNow = new Date()
-// let a = timeNow.getTimezoneOffset()
-//     let b = a.getHours()
-// console.log(b)
+let arr = [
+    {msc: -180},
+    {ny: 300},
+    {la: 480}
+]
 
 let selector = []
 
-function findOption() {
+let find = function findOption() {
     let opt = document.getElementById("menu");
-    let option = opt.value;
-    selector.input = option;
+        option = opt.value;
+            selector.input = option;
+    let a = arr.find(function () {console.log(a)})
 }
 
 //таймер
@@ -17,7 +19,6 @@ function timer() {
     document.querySelector(".time").innerHTML = "" //удаление предыдущего значения
 
     let timeNow = new Date()
-        let f = timeNow.getTimezoneOffset()
 
     let h = timeNow.getHours().toString()
     let m = timeNow.getMinutes().toString()
@@ -39,5 +40,5 @@ function timer() {
 }
 
 timer()
+
 setInterval(timer, 1000) //итерация таймера в 1у секунду
-setInterval(findOption, 1000) //итерация таймера в 1у секунду
