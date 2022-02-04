@@ -1,16 +1,24 @@
 let arr = [
-    {msc: -180},
-    {ny: 300},
-    {la: 480},
+    {name: "Moscow",
+     value: "msc",
+     TimeZone: -180,},
+
+    {name: "NewYork",
+     value: "NY",
+     TimeZone: 300,},
+
+    {name: "LosAngeles",
+     value: "LA",
+     TimeZone: 480,},
 ]
 
-let selector = []
+// let arr = [-180,300,480,]
 
-let find = function findOption() {
+let option = function findOption() {
     let opt = document.getElementById("menu");
-        selector.input=opt.value
+        return opt.value
 }
- arr.includes(find) ? console.log("true") : console.log("Ура")
+let test = arr.find(el=>el.TimeZone === option())
 
 //таймер
 
@@ -39,5 +47,4 @@ function timer() {
 }
 
 timer()
-
 setInterval(timer, 1000) //итерация таймера в 1у секунду
