@@ -1,24 +1,23 @@
 let arr = [
     {name: "Moscow",
      value: "msc",
-     TimeZone: -180,},
+     timezone: -180,},
 
     {name: "NewYork",
      value: "NY",
-     TimeZone: 300,},
+     timezone: 300,},
 
     {name: "LosAngeles",
      value: "LA",
-     TimeZone: 480,},
+     timezone: 480,},
 ]
-
-// let arr = [-180,300,480,]
 
 let option = function findOption() {
     let opt = document.getElementById("menu");
         return opt.value
 }
-let test = arr.find(el=>el.TimeZone === option())
+
+arr.filter(el => el.timezone == option)
 
 //таймер
 
