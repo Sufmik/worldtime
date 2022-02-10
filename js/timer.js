@@ -12,14 +12,15 @@ let arr = [
      timezone: 480,},
 ]
 
-let answ = function findOption() {
+function findOption() {
     let opt = document.getElementById("menu");
         return opt.value
 }
 
-let test = arr.find (function (index) {
-    return index.value===answ()}
-)
+// let test = findOption()
+
+// let result = arr.find (el=>el.value===test)
+
 //таймер
 
 function timer() {
