@@ -12,9 +12,10 @@ let arr = [
      timezone: 480,},
 ]
 
+let opt = document.getElementById("menu").value;
+
 function findOption() {
-    let opt = document.getElementById("menu");
-        return opt.value
+    return new opt // сделать констурктор!!!!!!!!!!
 }
 
 // let test = findOption()
