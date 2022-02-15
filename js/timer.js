@@ -12,11 +12,18 @@ let arr = [
      timezone: 480,},
 ]
 
-let opt = document.getElementById("menu").value;
+// выбор пользователя
+//
+// function findOption(a) {
+//     return (a.value);
+// }
+let result
 
-function findOption() {
-    return new opt // сделать констурктор!!!!!!!!!!
-}
+let opt = document.getElementById("menu");
+
+    opt.addEventListener('change', () =>{alert (opt.value)})
+
+
 
 // let test = findOption()
 
