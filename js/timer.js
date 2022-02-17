@@ -1,29 +1,26 @@
 let arr = [
-    {name: "Moscow",
-     value: "msc",
-     timezone: -180,},
+    {
+        name: "Moscow",
+        value: "msc",
+        timezone: -180,
+    },
 
-    {name: "NewYork",
-     value: "NY",
-     timezone: 300,},
+    {
+        name: "NewYork",
+        value: "NY",
+        timezone: 300,
+    },
 
-    {name: "LosAngeles",
-     value: "LA",
-     timezone: 480,},
+    {
+        name: "LosAngeles",
+        value: "LA",
+        timezone: 480,
+    },
 ]
 
-// выбор пользователя
-//
-// function findOption(a) {
-//     return (a.value);
-// }
-let result
+let opt = document.getElementById("menu")
 
-let opt = document.getElementById("menu");
-
-    opt.addEventListener('change', () =>{alert (opt.value)})
-
-
+    opt.addEventListener('change', () => {alert(opt.value)})
 
 // let test = findOption()
 
@@ -40,19 +37,19 @@ function timer() {
     let m = timeNow.getMinutes().toString()
     let s = timeNow.getSeconds().toString()
 
-    if (h.length<2) {
-        h="0"+h
+    if (h.length < 2) {
+        h = "0" + h
     }
 
-    if (m.length<2) {
-        m="0"+m
+    if (m.length < 2) {
+        m = "0" + m
     }
 
-    if (s.length<2) {
-        s="0"+s
+    if (s.length < 2) {
+        s = "0" + s
     }
 
-    document.querySelector(".time").innerHTML = (h)+":"+(m)+":"+(s) //новое значение времени исходя из времени системы пользователя
+    document.querySelector(".time").innerHTML = (h) + ":" + (m) + ":" + (s) //новое значение времени исходя из времени системы пользователя
 }
 
 timer()
