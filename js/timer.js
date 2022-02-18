@@ -20,7 +20,7 @@ let arr = [
 
 let opt = document.getElementById("menu")
 
-    opt.addEventListener('change', () => {alert(opt.value)})
+opt.addEventListener('change', () => { alert(opt.value) })
 
 // let test = findOption()
 
