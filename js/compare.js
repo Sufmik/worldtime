@@ -22,12 +22,26 @@ const compare = () => {
     let opt = document.getElementById("menu")
 
     localStorage.setItem('city', JSON.stringify([]))
-    let good = (JSON.parse(localStorage.getItem('city')))
-    console.log(good)
+    let city = (JSON.parse(localStorage.getItem('city')))
 
-    opt.addEventListener('change', () => {
-        alert(opt.value)
-    })
+    let getData = () => {
+        opt.addEventListener('change', (e) => {
+            if (city.length == 0) {
+                city.push(opt.value)
+                localStorage.setItem('city', JSON.stringify(city))
+                console.log(city);
+            } else if (city.length > 0) {
+                city.pop()
+                city.push(opt.value)
+                localStorage.setItem('city', JSON.stringify(city))
+                console.log(city);
+            } else {
+                localStorage.setItem('city', JSON.stringify([]))
+                console.log(e);
+            }
+        })
+    }
+    getData()
 }
 
 compare()
