@@ -20,7 +20,14 @@ const compare = () => {
     ]
 
     let opt = document.getElementById("menu")
-    opt.addEventListener('change', () => { alert(opt.value) })
+
+    localStorage.setItem('city', JSON.stringify([]))
+    let good = (JSON.parse(localStorage.getItem('city')))
+    console.log(good)
+
+    opt.addEventListener('change', () => {
+        alert(opt.value)
+    })
 }
 
 compare()
