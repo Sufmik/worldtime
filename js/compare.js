@@ -31,24 +31,34 @@ const compare = () => {
                 localStorage.setItem('city', JSON.stringify(city))
                 console.log(city);
 
-                /*let result = (value) => {
+                let result = (value) => {
                     let city = (JSON.parse(localStorage.getItem('city')))
-
-                    let newCity = city.map(item => {
-                        if (item.value === value) {
-                            return item
-                        }
+                    console.log(value);
+                    let newCity = arr.find(city => {
+                        if (city.value === value) {
+                            return console.log('Правда');
+                        } else { console.log('Лож'); }
                     })
-                    localStorage.setItem('city', JSON.stringify(newCity))
                 }
                 result()
-                console.log(result());*/
 
             } else if (city.length > 0) {
                 city.pop()
                 city.push(opt.value)
                 localStorage.setItem('city', JSON.stringify(city))
                 console.log(city);
+
+                let result = (value) => {
+                    let city = (JSON.parse(localStorage.getItem('city')))
+
+                    let newCity = arr.find(item => {
+                        if (item.value === city) {
+                            return console.log('Правда');
+                        } else { console.log('Лож'); }
+                    })
+                }
+                result()
+
             } else {
                 localStorage.setItem('city', JSON.stringify([]))
                 console.log(e);
