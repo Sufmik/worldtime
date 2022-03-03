@@ -32,12 +32,12 @@ const compare = () => {
             if (city.length === 0) {
                 city.push(opt.value)
                 localStorage.setItem('city', JSON.stringify(city))
-                console.log(city);
 
                 let result = (value) => {
                     arr.find(city => {
                         if (city.value === value) {
-                            return console.log(value)
+                            const arrIndex = arr.findIndex(array => array.value === value)
+                            return console.log(arrIndex)
                         } else { console.log('Лож'); }
                     })
                 }
@@ -47,13 +47,12 @@ const compare = () => {
                 city.pop()
                 city.push(opt.value)
                 localStorage.setItem('city', JSON.stringify(city))
-                console.log(city);
 
                 let result = (value) => {
-                    console.log(value);
                     arr.find(city => {
                         if (city.value === value) {
-                            return console.log('Правда');
+                            const arrIndex = arr.findIndex(array => array.value === value)
+                            return console.log(arrIndex)
                         } else { console.log('Лож'); }
                     })
                 }
