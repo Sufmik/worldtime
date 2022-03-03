@@ -36,7 +36,7 @@ const compare = () => {
                 let result = (value) => {
                     arr.find(city => {
                         if (city.value === value) {
-                            const arrIndex = arr.findIndex(array => array.value === value)
+                            const arrIndex = arr.find(array => array.value === value).timezone
                             return console.log(arrIndex)
                         } else { console.log('Лож'); }
                     })
@@ -51,7 +51,7 @@ const compare = () => {
                 let result = (value) => {
                     arr.find(city => {
                         if (city.value === value) {
-                            const arrIndex = arr.findIndex(array => array.value === value)
+                            const arrIndex = arr.find(array => array.value === value).timezone
                             return console.log(arrIndex)
                         } else { console.log('Лож'); }
                     })
