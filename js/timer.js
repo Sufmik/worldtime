@@ -5,7 +5,9 @@ function timer() {
 
     let timeNow = new Date()
 
-    let h = timeNow.getHours().toString()
+    let zone = (JSON.parse(localStorage.getItem('zone')))
+
+    let h = timeNow.getHours().toString() - zone.toString()
     let m = timeNow.getMinutes().toString()
     let s = timeNow.getSeconds().toString()
 

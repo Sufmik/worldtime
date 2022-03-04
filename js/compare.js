@@ -4,27 +4,28 @@ const compare = () => {
             id: 1,
             name: "Moscow",
             value: "MSC",
-            timezone: -180,
+            timezone: 0,
         },
 
         {
             id: 2,
             name: "NewYork",
             value: "NY",
-            timezone: 300,
+            timezone: 8 //300
         },
 
         {
             id: 3,
             name: "LosAngeles",
             value: "LA",
-            timezone: 480,
+            timezone: 11 //480
         },
     ]
 
     let opt = document.getElementById("menu")
 
     localStorage.setItem('city', JSON.stringify([]))
+    localStorage.setItem('zone', JSON.stringify([]))
     let city = (JSON.parse(localStorage.getItem('city')))
 
     let getData = () => {
@@ -37,6 +38,7 @@ const compare = () => {
                     arr.find(city => {
                         if (city.value === value) {
                             const arrIndex = arr.find(array => array.value === value).timezone
+                            localStorage.setItem('zone', JSON.stringify(arrIndex))
                             return console.log(arrIndex)
                         } else { console.log('Лож'); }
                     })
@@ -52,6 +54,7 @@ const compare = () => {
                     arr.find(city => {
                         if (city.value === value) {
                             const arrIndex = arr.find(array => array.value === value).timezone
+                            localStorage.setItem('zone', JSON.stringify(arrIndex))
                             return console.log(arrIndex)
                         } else { console.log('Лож'); }
                     })
