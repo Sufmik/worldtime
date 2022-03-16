@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src='js/timer.js' defer></script>
+
     <script src="js/compare.js" defer></script>
+    <script src="js/timer_new.js" defer></script>
 </head>
 
 <body>
 
     <div class="content">
-        <div class="time"></div>
+        <div class="clock">
+            <div class="hour" id="hour">0</div>
+            <div class="hour1">0</div>
+            <div class="minute">0</div>
+            <div class="minute1">0</div>
+            <div class="seconds">0</div>
+            <div class="seconds1">0</div>
+        </div>
         <label>
             <select class="menu" id="menu">
                 <option value="MSC">Москва</option>
