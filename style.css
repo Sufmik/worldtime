@@ -2,6 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     text-align: center;
+    background: black;
 }
 
 .content {
@@ -30,4 +31,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Ширина изображений */
+    height: 100%; /* Высота изображении */
+    object-fit: cover;
 }
