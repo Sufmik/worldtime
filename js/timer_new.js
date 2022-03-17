@@ -54,6 +54,8 @@ const timer = () => {
         },
     ]
 
+    let zone = (JSON.parse(localStorage.getItem('zone')))
+
     //час
     const h = timeNow.getHours()
     const h1 = Math.floor(h / 10); //час, первая цифра
