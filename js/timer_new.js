@@ -118,4 +118,4 @@ const timer = () => {
 
 timer()
 
-setInterval(timer, 1000)
+setInterval(timer, 500)
