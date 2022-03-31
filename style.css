@@ -16,7 +16,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: red;
 }
 
 .timer_block {
@@ -25,13 +24,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: green;
+    background: rgb(90, 89, 89);
+    border-radius: 10px;
+    margin: 5px;
 }
 
 .time {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+img {
+    width: 64px;
+    height: 84px;
 }
 
 .menu {
