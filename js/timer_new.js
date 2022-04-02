@@ -53,17 +53,20 @@ const timer = () => {
     ]
 
     const d = new Date()
-    timeNow = spacetime(d)
+    let timeNow = spacetime(d)
+    opt = document.getElementById("menu")
 
-
-    const opt = document.getElementById("menu")
     opt.addEventListener('change', () => {
-        timeNow = timeNow.goto(opt.value)
+        if (opt.value == 'choose') {
+            console.log('Выберите город');
+        } else {
+            newTime = timeNow.goto(opt.value)
+            return console.log(newTime.time());
+        }
     })
-    console.log(timeNow.time());
 
     //час
-    const h = timeNow.hour()
+    const h = opt.value == 'choose' ? timeNow.hour() : newTime.hour()
     const h1 = Math.floor(h / 10); //час, первая цифра
     const h2 = h - h1 * 10 //час, вторая цифра
 
@@ -77,8 +80,8 @@ const timer = () => {
     const s1 = Math.floor(s / 10); //минута, первая цифра
     const s2 = s - s1 * 10 //минута, вторая цифра
 
-    //определение нужного числа
 
+    //определение нужного числа
     data.find(value => {
         if (h1 == value.time) {
             const index = data.find(value => value.time == h1).src
@@ -94,28 +97,28 @@ const timer = () => {
     })
 
     data.find(value => {
-        if (h1 == value.time) {
+        if (m1 == value.time) {
             const index = data.find(value => value.time == m1).src
             document.querySelector('.minute').innerHTML = (index)
         }
     })
 
     data.find(value => {
-        if (h1 == value.time) {
+        if (m2 == value.time) {
             const index = data.find(value => value.time == m2).src
             document.querySelector('.minute1').innerHTML = (index)
         }
     })
 
     data.find(value => {
-        if (h1 == value.time) {
+        if (s1 == value.time) {
             const index = data.find(value => value.time == s1).src
             document.querySelector('.seconds').innerHTML = (index)
         }
     })
 
     data.find(value => {
-        if (h1 == value.time) {
+        if (s2 == value.time) {
             const index = data.find(value => value.time == s2).src
             document.querySelector('.seconds1').innerHTML = (index)
         }
