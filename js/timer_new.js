@@ -61,7 +61,6 @@ const timer = () => {
             console.log('Выберите город');
         } else {
             newTime = timeNow.goto(opt.value)
-            return console.log(newTime.time());
         }
     })
 
