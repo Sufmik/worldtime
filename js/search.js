@@ -7,10 +7,11 @@ const search = function () {
     searchText.addEventListener('input', (event) => {
         const res = event.target.value
         const keys = Object.keys(iana)
-        console.log(keys.includes(res));
-        //console.log(keys.find(city => city.property == res))
 
-        //index = Object.keys(iana).find(city => res == keys)
+        const index = keys.filter(item => {
+            return item.toLowerCase().includes(res.toLowerCase())
+        })
+        console.log(index);
     })
 }
 
