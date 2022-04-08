@@ -55,17 +55,35 @@ const timer = () => {
     const d = new Date()
     let timeNow = spacetime(d)
     opt = document.getElementById("menu")
+    index2 = document.querySelector(".search_text")
 
-    opt.addEventListener('change', () => {
-        if (opt.value == 'choose') {
-            console.log('Выберите город');
-        } else {
-            newTime = timeNow.goto(opt.value)
+
+    // выбор города из выпадающего меню
+    //opt.addEventListener('change', () => {
+    //    if (opt.value == 'choose') {
+    //        console.log('Выберите город');
+    //    } else {
+    //        newTime = timeNow.goto(opt.value)
+    //    }
+    //})
+
+    index2.addEventListener('keypress', (event) => {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            if (index2.value == '') {
+                console.log('Выберите город');
+            } else {
+                newTime = timeNow.goto(index2.value)
+            }
         }
     })
 
     //час
-    const h = opt.value == 'choose' ? timeNow.hour() : newTime.hour()
+
+    // выбор города из выпадающего меню
+    //const h = opt.value == 'choose' ? timeNow.hour() : newTime.hour()
+
+    const h = index2.value == '' ? timeNow.hour() : newTime.hour()
     const h1 = Math.floor(h / 10); //час, первая цифра
     const h2 = h - h1 * 10 //час, вторая цифра
 
@@ -80,7 +98,7 @@ const timer = () => {
     const s2 = s - s1 * 10 //минута, вторая цифра
 
 
-    //определение нужного числа
+    //определение нужного числа для отображения
     data.find(value => {
         if (h1 == value.time) {
             const index = data.find(value => value.time == h1).src
