@@ -3,6 +3,8 @@ import iana from '/node_modules/spacetime/zonefile/iana.js'
 
 const search = function () {
     const searchText = document.querySelector('.search_text')
+    const dataList = document.querySelector('.city_list')
+    console.log(dataList);
 
     searchText.addEventListener('input', (event) => {
         const res = event.target.value
@@ -12,6 +14,11 @@ const search = function () {
             return item.toLowerCase().includes(res.toLowerCase())
         })
         console.log(index);
+
+        dataList.innerHTML = `
+        <option value="${index}"></option>
+        `
+        //<option value="Чебурашка"></option>
     })
 }
 
