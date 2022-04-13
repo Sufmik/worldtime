@@ -43,6 +43,7 @@ img {
 }
 
 /*select*/
+/* 
 .menu {
     width: 200px;
     margin-top: 30px;
@@ -61,6 +62,30 @@ img {
 
 .menu:hover {
     box-shadow: 0px 14px 14px rgba(234, 234, 234, 0.5);
+}
+
+*/
+
+/*search input*/
+.search_text {
+    width: 220px;
+    margin-top: 30px;
+    color: #fff;
+    background: rgb(30, 29, 29);
+    border: 1px solid gray;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    padding: 5px 0px;
+    transition: all 0.5s ease;
+    padding-left: 3px;
+}
+
+.search_text:hover {
+    box-shadow: 0px 10px 10px rgba(234, 234, 234, 0.5);
 }
 
 .search_text {
