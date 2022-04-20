@@ -7,14 +7,16 @@ const search = function () {
     const serachContainer = document.querySelector('.search')
 
     searchText.addEventListener('input', (event) => {
-        const res = event.target.value
+        //const res = event.target.value
         const keys = Object.keys(iana)
 
+        dataList.innerHTML = ''
         //const index = keys.filter(item => {
         //    return item.toLowerCase().includes(res.toLowerCase())
         //})
         keys.forEach(k => {
             const index = document.createElement('option')
+            index.innerHTML = ''
 
             index.innerHTML = `<option value="${k}"></option>`
 
