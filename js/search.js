@@ -16,8 +16,6 @@ const search = function () {
         //})
         keys.forEach(k => {
             const index = document.createElement('option')
-            index.innerHTML = ''
-
             index.innerHTML = `<option value="${k}"></option>`
 
             dataList.append(index)
