@@ -1,3 +1,5 @@
+//старая версия...
+
 const compare = () => {
     let arr = [
         {

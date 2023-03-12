@@ -1,4 +1,4 @@
-//таймер
+//таймер - старая версия
 
 function timer() {
     document.querySelector(".time").innerHTML = "" //удаление предыдущего значения
